@@ -137,11 +137,6 @@ namespace Calculator
             value = 0;
         }
 
-        private void clearEntry_Click(object sender, EventArgs e)
-        {
-            answerBox.Text = "0";
-        }
-
         private void calculatorForm_KeyPress(object sender, KeyPressEventArgs e)
         {
             switch (e.KeyChar.ToString())
