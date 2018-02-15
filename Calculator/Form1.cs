@@ -12,130 +12,98 @@ namespace Calculator
 {
     public partial class calculatorForm : Form
     {
-        double FirstNumber;
-        string Operation;
+        double value = 0;
+        string operation;
+        bool operation_pressed = false;
+
         public calculatorForm()
         {
             InitializeComponent();
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void button_Click(object sender, EventArgs e)
         {
-            if (answerBox.Text == "0")
+            if ((answerBox.Text == "0") || (operation_pressed))
             {
                 answerBox.Clear();
             }
+            operation_pressed = false;
             Button b = (Button)sender;
-            answerBox.Text += b.Text;
-        }
-
-        private void numberZero_Click(object sender, EventArgs e)
-        {
-            answerBox.Text = answerBox.Text.TrimStart('0') + "0";
-        }
-
-        private void multiplicationButton_Click(object sender, EventArgs e)
-        {
-            FirstNumber = Convert.ToDouble(answerBox.Text);
-            answerBox.Text = "0";
-            Operation = "*";
-        }
-
-        private void divisionButton_Click(object sender, EventArgs e)
-        {
-            FirstNumber = Convert.ToDouble(answerBox.Text);
-            answerBox.Text = "0";
-            Operation = "/";
-        }
-
-        private void plusButton_Click(object sender, EventArgs e)
-        {
-            FirstNumber = Convert.ToDouble(answerBox.Text);
-            answerBox.Text = "0";
-            Operation = "+";
-        }
-
-        private void subtractionButton_Click(object sender, EventArgs e)
-        {
-            FirstNumber = Convert.ToDouble(answerBox.Text);
-            answerBox.Text = "0";
-            Operation = "-";
-        }
-
-        private void exponentButton_Click(object sender, EventArgs e)
-        {
-            FirstNumber = Convert.ToDouble(answerBox.Text);
-            answerBox.Text = "0";
-            Operation = "^";
-        }
-
-        private void clearButton_Click(object sender, EventArgs e)
-        {
-            answerBox.Clear();
-            answerBox.Text = "0";
-        }
-
-        private void clearEntry_Click(object sender, EventArgs e)
-        {
-            answerBox.Text = "0";
-        }
-
-        private void decimalButton_Click(object sender, EventArgs e)
-        {
-            if (!answerBox.Text.Contains(".")) {
-                answerBox.Text += ".";
+            if (b.Text == ".")
+            {
+                if (!answerBox.Text.Contains("."))
+                {
+                    answerBox.Text += b.Text;
+                }
             }
+            else
+            {
+                answerBox.Text += b.Text;
+            }
+        }
+
+        private void operator_Click(object sender, EventArgs e)
+        {
+            Button b = (Button)sender;
+            if (value != 0)
+            {
+                equalsButton.PerformClick();
+                operation_pressed = true;
+                operation = b.Text;
+            }
+            operation = b.Text;
+            value = Convert.ToDouble(answerBox.Text);
+            operation_pressed = true;
         }
 
         private void equalsButton_Click(object sender, EventArgs e)
         {
-            double SecondNumber;
-            double Answer;
+            double secondNumber;
+            double answer;
+            secondNumber = Convert.ToDouble(answerBox.Text);
 
-            SecondNumber = Convert.ToDouble(answerBox.Text);
-
-            if (Operation == "*")
+            switch (operation)
             {
-                Answer = FirstNumber * SecondNumber;
-                answerBox.Text = Convert.ToString(Answer);
-                FirstNumber = Answer;
+                case "*":
+                    answer = value * secondNumber;
+                    answerBox.Text = Convert.ToString(answer);
+                    break;
+                case "/":
+                    if (secondNumber == 0)
+                    {
+                        MessageBox.Show("Cannot divide by zero.");
+                        answerBox.Text = Convert.ToString(value);
+                        break;
+                    }
+                    else
+                    {
+                        answer = value / secondNumber;
+                        answerBox.Text = Convert.ToString(answer);
+                        break;
+                    }
+                case "+":
+                    answer = value + secondNumber;
+                    answerBox.Text = Convert.ToString(answer);
+                    break;
+                case "-":
+                    answer = value - secondNumber;
+                    answerBox.Text = Convert.ToString(answer);
+                    break;
+                case "^":
+                    answer = Math.Pow(value, secondNumber);
+                    answerBox.Text = Convert.ToString(answer);
+                    break;
+                default:
+                    break;
             }
 
-            if (Operation == "/")
-            {
-                if (SecondNumber == 0)
-                {
-                    MessageBox.Show("Zero division is not a valid operation.");
-                    answerBox.Text = FirstNumber.ToString();
-                }
-                else
-                {
-                    Answer = FirstNumber / SecondNumber;
-                    answerBox.Text = Convert.ToString(Answer);
-                    FirstNumber = Answer;
-                }
-            }
-
-            if (Operation == "+")
-            {
-                Answer = FirstNumber + SecondNumber;
-                answerBox.Text = Convert.ToString(Answer);
-                FirstNumber = Answer;
-            }
-
-            if (Operation == "-")
-            {
-                Answer = FirstNumber - SecondNumber;
-                answerBox.Text = Convert.ToString(Answer);
-                FirstNumber = Answer;
-            }
-
-            if (Operation == "^")
-            {
-                Answer = Math.Pow(FirstNumber, SecondNumber);
-                answerBox.Text = Convert.ToString(Answer);
-                FirstNumber = Answer;
-            }
+            value = Convert.ToDouble(answerBox.Text);
+            operation = "";
         }
 
         private void positiveNegative_Click(object sender, EventArgs e)
@@ -160,6 +128,76 @@ namespace Calculator
             else
             {
                 answerBox.Text = Convert.ToString(Math.Sqrt(Convert.ToDouble(answerBox.Text)));
+            }
+        }
+
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            answerBox.Clear();
+            value = 0;
+        }
+
+        private void clearEntry_Click(object sender, EventArgs e)
+        {
+            answerBox.Text = "0";
+        }
+
+        private void calculatorForm_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            switch (e.KeyChar.ToString())
+            {
+                case "1":
+                    numberOne.PerformClick();
+                    break;
+                case "2":
+                    numberTwo.PerformClick();
+                    break;
+                case "3":
+                    numberThree.PerformClick();
+                    break;
+                case "4":
+                    numberFour.PerformClick();
+                    break;
+                case "5":
+                    numberFive.PerformClick();
+                    break;
+                case "6":
+                    numberSix.PerformClick();
+                    break;
+                case "7":
+                    numberSeven.PerformClick();
+                    break;
+                case "8":
+                    numberEight.PerformClick();
+                    break;
+                case "9":
+                    numberNine.PerformClick();
+                    break;
+                case "0":
+                    numberZero.PerformClick();
+                    break;
+                case "*":
+                    multiplicationButton.PerformClick();
+                    break;
+                case "/":
+                    divisionButton.PerformClick();
+                    break;
+                case "-":
+                    subtractionButton.PerformClick();
+                    break;
+                case "+":
+                    additionButton.PerformClick();
+                    break;
+                case "=":
+                    equalsButton.PerformClick();
+                    break;
+                default:
+                    break;
+            }
+
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                equalsButton.PerformClick();
             }
         }
     }

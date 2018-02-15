@@ -40,7 +40,7 @@
             this.numberEight = new System.Windows.Forms.Button();
             this.numberNine = new System.Windows.Forms.Button();
             this.numberZero = new System.Windows.Forms.Button();
-            this.plusButton = new System.Windows.Forms.Button();
+            this.additionButton = new System.Windows.Forms.Button();
             this.divisionButton = new System.Windows.Forms.Button();
             this.multiplicationButton = new System.Windows.Forms.Button();
             this.subtractionButton = new System.Windows.Forms.Button();
@@ -50,7 +50,6 @@
             this.positiveNegative = new System.Windows.Forms.Button();
             this.squareRoot = new System.Windows.Forms.Button();
             this.exponentButton = new System.Windows.Forms.Button();
-            this.clearEntry = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // answerBox
@@ -70,7 +69,7 @@
             this.numberOne.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.numberOne.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numberOne.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.numberOne.Location = new System.Drawing.Point(13, 62);
+            this.numberOne.Location = new System.Drawing.Point(12, 62);
             this.numberOne.Name = "numberOne";
             this.numberOne.Size = new System.Drawing.Size(60, 56);
             this.numberOne.TabIndex = 1;
@@ -82,7 +81,7 @@
             // 
             this.numberTwo.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.numberTwo.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numberTwo.Location = new System.Drawing.Point(79, 63);
+            this.numberTwo.Location = new System.Drawing.Point(78, 62);
             this.numberTwo.Name = "numberTwo";
             this.numberTwo.Size = new System.Drawing.Size(60, 56);
             this.numberTwo.TabIndex = 2;
@@ -94,7 +93,7 @@
             // 
             this.numberThree.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.numberThree.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numberThree.Location = new System.Drawing.Point(145, 63);
+            this.numberThree.Location = new System.Drawing.Point(143, 62);
             this.numberThree.Name = "numberThree";
             this.numberThree.Size = new System.Drawing.Size(60, 56);
             this.numberThree.TabIndex = 3;
@@ -106,7 +105,7 @@
             // 
             this.numberFour.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.numberFour.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numberFour.Location = new System.Drawing.Point(12, 124);
+            this.numberFour.Location = new System.Drawing.Point(13, 124);
             this.numberFour.Name = "numberFour";
             this.numberFour.Size = new System.Drawing.Size(60, 56);
             this.numberFour.TabIndex = 4;
@@ -130,7 +129,7 @@
             // 
             this.numberSix.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.numberSix.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numberSix.Location = new System.Drawing.Point(145, 123);
+            this.numberSix.Location = new System.Drawing.Point(145, 124);
             this.numberSix.Name = "numberSix";
             this.numberSix.Size = new System.Drawing.Size(60, 56);
             this.numberSix.TabIndex = 6;
@@ -166,7 +165,7 @@
             // 
             this.numberNine.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.numberNine.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numberNine.Location = new System.Drawing.Point(145, 185);
+            this.numberNine.Location = new System.Drawing.Point(143, 186);
             this.numberNine.Name = "numberNine";
             this.numberNine.Size = new System.Drawing.Size(60, 56);
             this.numberNine.TabIndex = 9;
@@ -178,25 +177,25 @@
             // 
             this.numberZero.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.numberZero.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numberZero.Location = new System.Drawing.Point(13, 247);
+            this.numberZero.Location = new System.Drawing.Point(13, 248);
             this.numberZero.Name = "numberZero";
             this.numberZero.Size = new System.Drawing.Size(126, 56);
             this.numberZero.TabIndex = 10;
             this.numberZero.Text = "0";
             this.numberZero.UseVisualStyleBackColor = false;
-            this.numberZero.Click += new System.EventHandler(this.numberZero_Click);
+            this.numberZero.Click += new System.EventHandler(this.button_Click);
             // 
-            // plusButton
+            // additionButton
             // 
-            this.plusButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.plusButton.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.plusButton.Location = new System.Drawing.Point(211, 185);
-            this.plusButton.Name = "plusButton";
-            this.plusButton.Size = new System.Drawing.Size(60, 56);
-            this.plusButton.TabIndex = 11;
-            this.plusButton.Text = "+";
-            this.plusButton.UseVisualStyleBackColor = false;
-            this.plusButton.Click += new System.EventHandler(this.plusButton_Click);
+            this.additionButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.additionButton.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.additionButton.Location = new System.Drawing.Point(209, 186);
+            this.additionButton.Name = "additionButton";
+            this.additionButton.Size = new System.Drawing.Size(60, 56);
+            this.additionButton.TabIndex = 11;
+            this.additionButton.Text = "+";
+            this.additionButton.UseVisualStyleBackColor = false;
+            this.additionButton.Click += new System.EventHandler(this.operator_Click);
             // 
             // divisionButton
             // 
@@ -208,39 +207,39 @@
             this.divisionButton.TabIndex = 12;
             this.divisionButton.Text = "/";
             this.divisionButton.UseVisualStyleBackColor = false;
-            this.divisionButton.Click += new System.EventHandler(this.divisionButton_Click);
+            this.divisionButton.Click += new System.EventHandler(this.operator_Click);
             // 
             // multiplicationButton
             // 
             this.multiplicationButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.multiplicationButton.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.multiplicationButton.Location = new System.Drawing.Point(210, 62);
+            this.multiplicationButton.Location = new System.Drawing.Point(209, 62);
             this.multiplicationButton.Name = "multiplicationButton";
             this.multiplicationButton.Size = new System.Drawing.Size(60, 56);
             this.multiplicationButton.TabIndex = 13;
             this.multiplicationButton.Text = "*";
             this.multiplicationButton.UseVisualStyleBackColor = false;
-            this.multiplicationButton.Click += new System.EventHandler(this.multiplicationButton_Click);
+            this.multiplicationButton.Click += new System.EventHandler(this.operator_Click);
             // 
             // subtractionButton
             // 
             this.subtractionButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.subtractionButton.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subtractionButton.Location = new System.Drawing.Point(211, 247);
+            this.subtractionButton.Location = new System.Drawing.Point(209, 248);
             this.subtractionButton.Name = "subtractionButton";
             this.subtractionButton.Size = new System.Drawing.Size(60, 56);
             this.subtractionButton.TabIndex = 14;
             this.subtractionButton.Text = "-";
             this.subtractionButton.UseVisualStyleBackColor = false;
-            this.subtractionButton.Click += new System.EventHandler(this.subtractionButton_Click);
+            this.subtractionButton.Click += new System.EventHandler(this.operator_Click);
             // 
             // clearButton
             // 
             this.clearButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.clearButton.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearButton.Location = new System.Drawing.Point(13, 309);
+            this.clearButton.Location = new System.Drawing.Point(273, 248);
             this.clearButton.Name = "clearButton";
-            this.clearButton.Size = new System.Drawing.Size(126, 56);
+            this.clearButton.Size = new System.Drawing.Size(61, 56);
             this.clearButton.TabIndex = 15;
             this.clearButton.Text = "C";
             this.clearButton.UseVisualStyleBackColor = false;
@@ -250,21 +249,21 @@
             // 
             this.decimalButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.decimalButton.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.decimalButton.Location = new System.Drawing.Point(145, 249);
+            this.decimalButton.Location = new System.Drawing.Point(143, 248);
             this.decimalButton.Name = "decimalButton";
             this.decimalButton.Size = new System.Drawing.Size(60, 56);
             this.decimalButton.TabIndex = 16;
             this.decimalButton.Text = ".";
             this.decimalButton.UseVisualStyleBackColor = false;
-            this.decimalButton.Click += new System.EventHandler(this.decimalButton_Click);
+            this.decimalButton.Click += new System.EventHandler(this.button_Click);
             // 
             // equalsButton
             // 
             this.equalsButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.equalsButton.Font = new System.Drawing.Font("Courier New", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.equalsButton.Location = new System.Drawing.Point(277, 249);
+            this.equalsButton.Location = new System.Drawing.Point(12, 310);
             this.equalsButton.Name = "equalsButton";
-            this.equalsButton.Size = new System.Drawing.Size(60, 116);
+            this.equalsButton.Size = new System.Drawing.Size(321, 56);
             this.equalsButton.TabIndex = 17;
             this.equalsButton.Text = "=";
             this.equalsButton.UseVisualStyleBackColor = false;
@@ -274,7 +273,7 @@
             // 
             this.positiveNegative.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.positiveNegative.Font = new System.Drawing.Font("Courier New", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.positiveNegative.Location = new System.Drawing.Point(276, 63);
+            this.positiveNegative.Location = new System.Drawing.Point(274, 62);
             this.positiveNegative.Name = "positiveNegative";
             this.positiveNegative.Size = new System.Drawing.Size(60, 56);
             this.positiveNegative.TabIndex = 18;
@@ -286,7 +285,7 @@
             // 
             this.squareRoot.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.squareRoot.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.squareRoot.Location = new System.Drawing.Point(277, 125);
+            this.squareRoot.Location = new System.Drawing.Point(274, 124);
             this.squareRoot.Name = "squareRoot";
             this.squareRoot.Size = new System.Drawing.Size(60, 56);
             this.squareRoot.TabIndex = 19;
@@ -298,33 +297,20 @@
             // 
             this.exponentButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.exponentButton.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exponentButton.Location = new System.Drawing.Point(277, 187);
+            this.exponentButton.Location = new System.Drawing.Point(274, 186);
             this.exponentButton.Name = "exponentButton";
             this.exponentButton.Size = new System.Drawing.Size(60, 56);
             this.exponentButton.TabIndex = 20;
             this.exponentButton.Text = "^";
             this.exponentButton.UseVisualStyleBackColor = false;
-            this.exponentButton.Click += new System.EventHandler(this.exponentButton_Click);
-            // 
-            // clearEntry
-            // 
-            this.clearEntry.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.clearEntry.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearEntry.Location = new System.Drawing.Point(144, 309);
-            this.clearEntry.Name = "clearEntry";
-            this.clearEntry.Size = new System.Drawing.Size(126, 56);
-            this.clearEntry.TabIndex = 21;
-            this.clearEntry.Text = "CE";
-            this.clearEntry.UseVisualStyleBackColor = false;
-            this.clearEntry.Click += new System.EventHandler(this.clearEntry_Click);
+            this.exponentButton.Click += new System.EventHandler(this.operator_Click);
             // 
             // calculatorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Navy;
-            this.ClientSize = new System.Drawing.Size(346, 377);
-            this.Controls.Add(this.clearEntry);
+            this.ClientSize = new System.Drawing.Size(346, 378);
             this.Controls.Add(this.exponentButton);
             this.Controls.Add(this.squareRoot);
             this.Controls.Add(this.positiveNegative);
@@ -334,7 +320,7 @@
             this.Controls.Add(this.subtractionButton);
             this.Controls.Add(this.multiplicationButton);
             this.Controls.Add(this.divisionButton);
-            this.Controls.Add(this.plusButton);
+            this.Controls.Add(this.additionButton);
             this.Controls.Add(this.numberZero);
             this.Controls.Add(this.numberNine);
             this.Controls.Add(this.numberEight);
@@ -348,11 +334,13 @@
             this.Controls.Add(this.answerBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.Name = "calculatorForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculator";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.calculatorForm_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -371,7 +359,7 @@
         private System.Windows.Forms.Button numberEight;
         private System.Windows.Forms.Button numberNine;
         private System.Windows.Forms.Button numberZero;
-        private System.Windows.Forms.Button plusButton;
+        private System.Windows.Forms.Button additionButton;
         private System.Windows.Forms.Button divisionButton;
         private System.Windows.Forms.Button multiplicationButton;
         private System.Windows.Forms.Button subtractionButton;
@@ -381,7 +369,6 @@
         private System.Windows.Forms.Button positiveNegative;
         private System.Windows.Forms.Button squareRoot;
         private System.Windows.Forms.Button exponentButton;
-        private System.Windows.Forms.Button clearEntry;
     }
 }
 
